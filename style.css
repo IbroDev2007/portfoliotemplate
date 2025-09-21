@@ -86,7 +86,7 @@ aside p{
 main {
     grid-area: main;
     background-color: #F1F1F1;
-    padding: 15px 20px 0px 10px;
+    padding: 15px 20px 0px 20px;
 }
 
 .filter {
@@ -167,6 +167,7 @@ main {
         align-items: center;
         justify-content: space-between;
         padding: 40px 10px 40px 10px;
+        position: relative;
         /* padding: 30px; */
     }
 
@@ -303,7 +304,7 @@ main {
 .about p {
     font-size: 1em;
     line-height: 22.5px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .skills {
@@ -384,4 +385,114 @@ main {
     font-size: 1em;
     font-weight: 100;
 }
+
+.pricing {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pricing .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.charge div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.charge .btn {
+    background-color: #60bab2;
+    color: white;
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+.charge div:nth-child(1) {
+    padding: 30px 0px 30px 0px;
+}
+
+.charge div:nth-child(6) {
+    padding: 10px 0px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.charge div:nth-child(6) h1 {
+    font-size: 1.7em;
+}
+
+.charge div:nth-child(7) {
+    padding: 30px 0px 30px 0px;
+}
+
+.basic div {
+    background-color:#f9f9f9;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.basic div:nth-child(1) {
+    background-color: #606060;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.basic div:nth-child(7) {
+    background-color: #F1F1F1;
+    border-bottom: none !important;
+}
+
+.pro div {
+    background-color:#f9f9f9;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.pro div:nth-child(1) {
+    background-color: #60bab2;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.pro div:nth-child(7) {
+    background-color: #F1F1F1;
+    border-bottom: none !important;
+}
+
+.premium div {
+    background-color:#f9f9f9;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.premium div:nth-child(1) {
+    background-color: #606060;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.premium div:nth-child(7) {
+    background-color: #F1F1F1;
+    border-bottom: none !important;
+}
+
+@media(max-width:600px) {
+    .pricing .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
  
