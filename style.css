@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        'aside main'
+    ;
+    grid-template-columns: minmax(300px, 0.2fr) minmax(0, auto);
+}
+
+aside {
+    grid-area: aside;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 20px 0px 0px 20px;
+}
+
+aside h5 {
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+aside p{
+    color: gray;
+    font-weight: 500;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 8px;
+    display: none;
+}
+
+.hamburger .line {
+    width: 35px;
+    height:5px;
+    background-color: black;
+}
+
+.menu-list {
+    padding: 0;
+}
+
+.menu-list li:nth-child(1) {
+    color: #009688;
+}
+
+.menu-list li:nth-child(1):hover {
+    color: black;
+}
+
+.menu-list li {
+    padding-top: 10px;
+}
+
+.menu-list i {
+    padding-right: 30px;
+}
+
+.icons{
+    display: flex;
+    padding-top: 10px;
+}
+
+.icons i{
+    font-size: 1.1em;
+}
+
+main {
+    grid-area: main;
+    background-color: #F1F1F1;
+    padding: 15px 20px 0px 10px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.filter .btn {
+    border-radius: 0;
+}
+
+.filter .btn:hover {
+    background-color: #cccccc !important;
+    color: black !important;
+}
+
+
+.filter i {
+    padding-right: 25px;
+}
+
+.filter .btn:nth-child(3) {
+    padding: 10px 15px;
+}
+
+.filter .btn:nth-child(3):hover {
+    background-color: #cccccc !important;
+}
+
+.filter .btn:nth-child(4) {
+    /* border: 2px solid red; */
+    padding: 10px 15px;
+}
+
+.filter .btn:nth-child(4):hover {
+    background-color: #cccccc !important;
+}
+
+.filter .btn:nth-child(5) {
+    /* border: 2px solid red; */
+    padding: 10px 15px;
+}
+
+.filter .btn:nth-child(5):hover {
+    background-color: #cccccc !important;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google {
+    font-size: 1.2em;
+}
+
+.fa-bars {
+    display: none;
+}
+
+@media(max-width:993px) {
+    body{
+        grid-template-areas: 
+        'aside'
+        'main'
+    ;  
+    grid-template-columns: 1fr; 
+    }
+
+    aside {
+        background-color: #F1F1F1;
+        height: 10vh;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+    }
+
+    aside h5, .alone, .menu-list, .icons {
+        display: none;
+    }
+
+    .logo {
+        width: 70px;
+        border-radius: 50%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .fa-bars {
+        display: block;
+        font-size: 2em;
+        font-weight: bolder;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.parent {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.parent img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.detail {
+    background-color: white;
+    padding: 10px 15px 10px 15px;
+    word-wrap: break-word;
+}
+
+.detail h5 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.detail p {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: 300;
+}
+
+@media(max-width:600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.numbering {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 0.5em; */
+    padding: 50px 0px 30px 0px;
+}
+
+.numbering div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    font-size: 0.9em;
+}
+
+.numbering div:nth-child(1), .numbering div:nth-child(6) {
+    padding: 9.5px 15px;
+}
+
+.numbering span {
+    font-size: 0.9em;
+}
+
+.numbering div:nth-child(2) {
+    background-color: black;
+    color: white;
+}
+
+.numbering div:hover {
+    background-color: black;
+    color: white;
+}
+
