@@ -520,7 +520,7 @@ main {
 }
 
 .contact {
-    padding: 20px 20px 90px 20px;
+    padding: 20px 20px 30px 20px;
     background-color: #9E9E9E;
 }
 
@@ -594,4 +594,91 @@ form .btn i {
     }
 }
 
- 
+footer {
+    background-color: #616161;
+    color: white;
+    padding: 50px 20px 40px 20px;
+} 
+
+footer .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    gap: 0.5em;
+}
+
+footer h3 {
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}
+
+.explain {
+    min-width: 0;
+}
+
+.explain p {
+    font-weight: 300;
+}
+
+.whale {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.whale:nth-child(2) {
+    border-bottom: thin solid white;
+    padding: 10px 0px 10px 10px;
+}
+
+.whale:nth-child(3) {
+    padding: 10px 0px 0px 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+} 
+
+.whale:hover {
+    background-color: #CCCCCC;
+}
+
+.populartags {
+    min-width: 0;
+}
+
+.populartags .wrapping {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, auto));
+    row-gap: 1em;
+    column-gap: 0.2em;
+}
+
+.populartags .wrapping div {
+    /* background-color: #9E9E9E; */
+    background-color: #8d9092;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.populartags .wrapping div:nth-child(1) {
+    background-color: black;
+}
+
+@media(max-width:600px) {
+    footer .wrapper {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+}
+
+.end {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 30px 0px;
+    font-weight: 300;
+}
