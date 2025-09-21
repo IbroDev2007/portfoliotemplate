@@ -83,10 +83,15 @@ aside p{
     font-size: 1.1em;
 }
 
+.heading {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 main {
     grid-area: main;
     background-color: #F1F1F1;
-    padding: 15px 20px 0px 20px;
+    padding: 15px 0px 0px 0px;
 }
 
 .filter {
@@ -95,6 +100,8 @@ main {
     gap: 0.5em;
     padding-top: 30px;
     padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .filter .btn {
@@ -171,7 +178,10 @@ main {
         /* padding: 30px; */
     }
 
-    aside h5, .alone, .menu-list, .icons {
+    aside h5,
+        .alone,
+        .menu-list, 
+        .icons {
         display: none;
     }
 
@@ -205,6 +215,8 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .parent {
@@ -283,6 +295,8 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .elder {
@@ -299,6 +313,11 @@ main {
     .twins {
         grid-template-columns: 1fr;
     }
+}
+
+.about {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about p {
@@ -387,8 +406,15 @@ main {
 }
 
 .pricing {
-    margin-top: 30px;
+    margin-top: 90px;
     margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pricing h4 {
+    font-size: 1.5em;
+    color: #606060;
 }
 
 .pricing .wrapper{
@@ -493,6 +519,79 @@ main {
     }
 }
 
+.contact {
+    padding: 20px 20px 90px 20px;
+    background-color: #9E9E9E;
+}
 
+.contact h4 {
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.contact .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact .wrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 20px 0px 20px 0px;
+}
+
+.contact .wrapper div:nth-child(1), 
+.contact .wrapper div:nth-child(3) {
+    background-color: #616161;
+    color: white;
+}
+
+.contact .wrapper div:nth-child(2) {
+    background-color: #009688;
+    color: white;
+}
+
+.contact .wrapper div i {
+    font-size: 2em;
+}
+
+form {
+    /* border: 2px solid red; */
+    border-top: thin solid white;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+
+form label {
+    padding-top: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+form .btn {
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+
+form .btn i {
+    padding-right: 30px;
+}
+
+@media(max-width:600px) {
+    .contact .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
 
  
