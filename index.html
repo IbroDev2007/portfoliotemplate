@@ -27,11 +27,12 @@
   </head>
   <body>
     <aside>
-      <img src="./images/logo.jpg" alt="" class="logo" />
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div class="topside">
+        <img src="./images/logo.jpg" alt="" class="logo" />
+        <div class="cancel">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </div>
       <h5>PORTFOLIO</h5>
       <p class="alone">Template by Ibrahim</p>
@@ -60,6 +61,14 @@
       </div>
     </aside>
     <main>
+      <header>
+        <div class="hamburger2">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <img src="./images/logo.jpg" alt="" class="logo2" />
+      </header>
       <div class="heading">
         <h1>My Portfolio</h1>
       </div>
@@ -375,10 +384,37 @@
         <p>Powered By Ibrahim</p>
       </div>
     </main>
+    <div class="overlay"></div>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"
   ></script>
+  <script>
+    const hamburger = document.querySelector(".hamburger2");
+    const aside = document.querySelector("aside");
+    const cancel = document.querySelector(".cancel");
+    const overlay = document.querySelector(".overlay");
+
+    hamburger.addEventListener("click", () => {
+      aside.classList.remove("hide"); // make sure hide is gone
+      aside.classList.add("show"); // open sidebar
+      hamburger.style.display = "none";
+    });
+
+    cancel.addEventListener("click", () => {
+      aside.classList.remove("show"); // make sure show is gone
+      aside.classList.add("hide"); // close sidebar
+      hamburger.style.display = "flex";
+    });
+
+    // Close sidebar when overlay is clicked
+    overlay.addEventListener("click", () => {
+      aside.classList.remove("show");
+      aside.classList.add("hide");
+      overlay.classList.remove("show");
+      hamburger.style.display = "flex";
+    });
+  </script>
 </html>
