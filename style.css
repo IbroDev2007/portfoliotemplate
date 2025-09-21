@@ -22,6 +22,7 @@ aside {
     left: 0;
     height: 100vh;
     padding: 20px 0px 0px 20px;
+    /* border: 2px solid red; */
 }
 
 aside h5 {
@@ -42,13 +43,13 @@ aside p{
 .hamburger {
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
+    gap: 0.2em;
     padding: 8px;
     display: none;
 }
 
 .hamburger .line {
-    width: 35px;
+    width: 25px;
     height:5px;
     background-color: black;
 }
@@ -119,7 +120,7 @@ main {
 }
 
 .filter .btn:nth-child(4) {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     padding: 10px 15px;
 }
 
@@ -128,7 +129,7 @@ main {
 }
 
 .filter .btn:nth-child(5) {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     padding: 10px 15px;
 }
 
@@ -161,12 +162,14 @@ main {
 
     aside {
         background-color: #F1F1F1;
+        /* border: 2px solid red; */
         height: 10vh;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        padding: 0px 10px 0px 10px;
+        padding: 40px 10px 40px 10px;
+        /* padding: 30px; */
     }
 
     aside h5, .alone, .menu-list, .icons {
@@ -174,7 +177,7 @@ main {
     }
 
     .logo {
-        width: 70px;
+        width: 50px;
         border-radius: 50%;
     }
 
@@ -186,6 +189,16 @@ main {
         display: block;
         font-size: 2em;
         font-weight: bolder;
+    }
+}
+
+@media(max-width:600px) {
+    .filter .btn:nth-child(4) {
+        display: none;
+    }
+
+    .filter .btn:nth-child(5) {
+        display: none;
     }
 }
 
